@@ -7,7 +7,7 @@ capsule_id    = 0
 deployment_types = ["mongodb", "postgresql", "etcd", "redis", "rethinkdb", "elasticsearch", "influxdb", "rabbitmq"]
 
 def curl(method, data)
-  puts("curl http://$HOST/billing/billable -X DELETE -H "'Content-type: application/json'" -d '#{data}'")
+  puts("curl http://$HOST/billing/billable -X #{method} -H 'Content-type: application/json' -d '#{data}'")
 end
 
 # generate accounts
@@ -29,9 +29,9 @@ end
     scale_range = [(rand() * 500).floor, (rand() * 500).floor].sort
     scale_count = Math.log(rand()).round.abs
 
-    curl("POST", {
+    curl("PUT", {
       account_id: account_id,
-      sku: "capsule:hqproxy",
+      sku: "capsule:haproxy",
       identifier:"capsule:#{capsule_ids[0]}",
       group_sku: "deployment:#{deployment_type}",
       group_identifier: "deployment:#{deployment_id}",
@@ -40,7 +40,7 @@ end
     }.to_json)
 
     capsule_ids[1..-1].each do |capsule_id|
-      curl("POST", {
+      curl("PUT", {
         account_id: account_id,
         sku: "capsule:#{deployment_type}",
         identifier:"capsule:#{capsule_id}",
@@ -58,7 +58,7 @@ end
       current_time = (last_date - ((last_date - current_time)  * rand()).floor.seconds).utc
 
       capsule_ids[1..-1].each do |capsule_id|
-        curl("POST", {
+        curl("PUT", {
           account_id: account_id,
           sku: "capsule:#{deployment_type}",
           identifier:"capsule:#{capsule_id}",
