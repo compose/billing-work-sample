@@ -12,14 +12,14 @@ Distributed billing systems are an interesting beast. We are looking for someone
 2. API programming
 3. Reports
 
-The following tasks will be based on the assets in the following files:
+The tasks will be based on the assets in the following files:
 
-* `api-calls.sh`, which can be run with `sh api-calls.sh $HOSTNAME` where `$HOSTNAME` is equal to an API you will create in step #2
-* `generator.rb` is a file we used the generate the `api-calls.sh`.  It can be used to generate a new set of API commands to test an API edge cases, but it is not required.
+* `api-calls.sh`, which can be run with `sh api-calls.sh $HOSTNAME` where `$HOSTNAME` is equal to an API you will create in step 2.
+* `generator.rb` is a file we used to generate the `api-calls.sh`.  It can be used to generate a new set of API commands to test an API edge cases, but it is not required.
 
 ## 1. System design
 
-Investigate the calls we are making in `api-calls.sh`.  Describe priorities and assumptions you will make for a system that would solve for these inputs (you will also want to read #3 to get a list of other requirements).
+Investigate the calls we are making in `api-calls.sh`.  Describe priorities and assumptions you will make for a system that would solve for these inputs (you will also want to read the 2 following tasks understand what you are designing).
 
 ## 2. API programming
 
@@ -35,4 +35,6 @@ Build a UI that shows the following:
 
 ## Words of encouragement
 
-The `api-calls.sh` is purposefully
+The `api-calls.sh` is purposefully left open ended.  Compose team members worked through the work sample to ensure we understand what we are asking of you.  If you stop, start, change directions, and change iterations, we want to see those modifications and thought process.  Please use a git repository so that we can see how your thought process evolved during the project.
+
+We are looking forward to hearing from you!
