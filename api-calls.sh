@@ -5,15 +5,15 @@ HOST=$1
 
 echo -n "Building the SKUs.  Press any button to continue..."
 read wait_var
-curl http://$HOST/billing/skus -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:mongodb","description:"a mongodb container","unit_price":"8.00"}'
-curl http://$HOST/billing/skus -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:haproxy","description:"a container","unit_price":"3.00"}'
-curl http://$HOST/billing/skus -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:rabbitmq","description:"a container","unit_price":"10.00"}'
-curl http://$HOST/billing/skus -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:postgresql","description:"a container","unit_price":"8.00"}'
-curl http://$HOST/billing/skus -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:elasticsearch","description:"a container","unit_price":"20.00"}'
-curl http://$HOST/billing/skus -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:etcd","description:"a container","unit_price":"5.00"}'
-curl http://$HOST/billing/skus -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:influxdb","description:"a container","unit_price":"6.00"}'
-curl http://$HOST/billing/skus -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:rethinkdb","description:"a container","unit_price":"8.00"}'
-curl http://$HOST/billing/skus -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:redis","description:"a container","unit_price":"10.00"}'
+curl http://$HOST/billing/sku -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:mongodb","description":"a mongodb container","unit_price":"8.00"}'
+curl http://$HOST/billing/sku -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:haproxy","description":"a container","unit_price":"3.00"}'
+curl http://$HOST/billing/sku -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:rabbitmq","description":"a container","unit_price":"10.00"}'
+curl http://$HOST/billing/sku -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:postgresql","description":"a container","unit_price":"8.00"}'
+curl http://$HOST/billing/sku -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:elasticsearch","description":"a container","unit_price":"20.00"}'
+curl http://$HOST/billing/sku -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:etcd","description":"a container","unit_price":"5.00"}'
+curl http://$HOST/billing/sku -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:influxdb","description":"a container","unit_price":"6.00"}'
+curl http://$HOST/billing/sku -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:rethinkdb","description":"a container","unit_price":"8.00"}'
+curl http://$HOST/billing/sku -X PUT -H "Content-type: application/json" -d '{"sku":"capsule:redis","description":"a container","unit_price":"10.00"}'
 
 echo -n "Creating a new billable.  Press any button to continue..."
 read wait_var

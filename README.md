@@ -1,23 +1,38 @@
-# Billing Engineer Work Sample
+# Business Systems Developer Work Sample
 
 Thank you for taking time to consider working at Compose.  This is a work sample to help us kick off the relationship.  We find starting with this process removes the uneasy feelings that resumés give us.
 
-This should take around 3 - 4 hours for a typical engineer.  Don't sweat if this takes longer.  While we say 3 - 4 hours, we respect quality work far more than an immediate response.  Thus, we put this timeframe on the project to be upfront with you more than to restrict you.
+This should take around 5 - 6 hours.  Don't sweat if this takes longer.  While we provide a time, we respect quality work far more than an immediate response.  Thus, we put this timeframe on the project to be upfront with you.  But, the time should not restrict you.
 
-# The work samples
+## The work samples
 
-Because billing is an interesting beast, we are looking for a variety of skills.  The following tasks are part of the work samples:
+Distributed billing systems are an interesting beast. We are looking for someone who can work through the logical process of simplifying complexity into a system that other people will find easy to use.  The following tasks are part of the work samples:
 
-1. API programming
-2. Data presentation
-3. Report generation
+1. System design
+2. API programming
+3. Reports
 
-## API programming
+The following tasks will be based on the assets in the following files:
 
-We have created a series of cURL commands at [curl comands].  These cURL commands are not vanilla, best-case commands.  They are the types of commands that you would expect from a distributed system.
+* `api-calls.sh`, which can be run with `sh api-calls.sh $HOSTNAME` where `$HOSTNAME` is equal to an API you will create in step #2
+* `generator.rb` is a file we used the generate the `api-calls.sh`.  It can be used to generate a new set of API commands to test an API edge cases, but it is not required.
 
-Build your API, then run this against them, where host and port are the host port for your local endpoint:
+## 1. System design
 
-```
-./api-calls.sh {host}:{port}
-```
+Investigate the calls we are making in `api-calls.sh`.  Describe priorities and assumptions you will make for a system that would solve for these inputs (you will also want to read #3 to get a list of other requirements).
+
+## 2. API programming
+
+Build a system which takes accepts the calls `api-calls.sh`.
+
+## 3. Reports
+
+Build a UI that shows the following:
+
+* overall view of revenue for a month
+* breakdown of revenue per customer for a month
+* breakdown of revenue per product for a month
+
+## Words of encouragement
+
+The `api-calls.sh` is purposefully
